@@ -1,0 +1,138 @@
+/* GENERAL PAGE LAYOUT */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f2f2f2;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 25px;
+  background: #111;
+  color: white;
+  align-items: center;
+}
+
+header h1 {
+  margin: 0;
+}
+
+nav a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  width: 90%;
+  max-width: 900px;
+  margin: 40px auto;
+  flex: 1;
+}
+
+/* PROJECT SELECTION CARDS */
+#projectCards {
+  text-align: center;
+}
+
+#home .cards {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  width: 230px;
+  padding: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 0 10px #aaa;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* SECTION CONTENT AREA */
+.section {
+  display: none;
+  margin-top: 25px;
+  padding: 25px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #aaa;
+}
+
+input, select {
+  width: 90%;
+  padding: 8px;
+  margin-top: 6px;
+  margin-bottom: 12px;
+  border-radius: 6px;
+  border: 1px solid #aaa;
+}
+
+/* Buttons */
+button {
+  cursor: pointer;
+}
+
+/* Rock CSS */
+.choices button {
+  font-size: 18px;
+  margin: 10px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  background: #111;
+  color: white;
+}
+
+#playAgain { 
+  display: none; 
+  background: black;
+  color: white;
+  font-size: 18px;
+  padding: 9px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+/* Guessing Game Box */
+.game-box {
+  background: rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 12px;
+  margin-top: 10px;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #111;
+  color: white;
+  margin-top: 0px;
+}
