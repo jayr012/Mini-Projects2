@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mini Projects</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Mini Projects</h1>
+  <nav>
+    <a onclick="showHome()">Home</a>
+    <a onclick="showProjects()">Mini Projects</a>
+  </nav>
+</header>
+
+<div class="container">
+
+  <!-- HOME CONTENT --!>
+<div id="home" style="display:none; text-align: center;">
+  <h2>Welcome!</h2>
+  <p>Select "Mini Projects" above to begin.</p>
+
+  <div class="cards">
+    <div class="card">
+      <h3>Rock Paper Scissors</h3>
+      <p>Play the classic Rock Paper Scissors game.</p>
+    </div>
+    <div class="card">
+      <h3>Number Guessing Game</h3>
+      <p>Try to guess the secret number!</p>
+    </div>
+  </div>
+</div>
+
+
+  <!-- PROJECT CARDS -->
+  <div id="projectCards">
+    <h2>Select a Project</h2>
+    <div class="cards">
+      <div class="card" onclick="showSection('rock')">Rock Paper Scissors</div>
+      <div class="card" onclick="showSection('guess')">Number Guessing Game</div>
+    </div>
+  </div>
+
+  <!-- ROCK SECTION -->
+  <div id="rock" class="section">
+    <h2>✊✋✌️ Rock Paper Scissors</h2>
+    <p>Choose your move:</p>
+    <div class="choices">
+      <button onclick="play('rock')">✊ Rock</button>
+      <button onclick="play('paper')">✋ Paper</button>
+      <button onclick="play('scissors')">✌️ Scissors</button>
+    </div>
+    <p id="userChoice"></p>
+    <p id="computerChoice"></p>
+    <h2 id="message"></h2>
+    <button id="playAgain" onclick="resetGame()">🔁 Play Again</button>
+  </div>
+
+  <!-- GUESSING GAME SECTION -->
+  <div id="guess" class="section">
+    <h2>🎯 Number Guessing Game</h2>
+    <div class="game-box" id="gameBox">
+      <p>Select Difficulty:</p>
+      <select id="difficulty" onchange="setDifficulty()">
+        <option value="easy">Easy (1–10, 5 tries)</option>
+        <option value="medium">Medium (1–50, 7 tries)</option>
+        <option value="hard">Hard (1–100, 10 tries)</option>
+      </select>
+      <p id="rangeText">Guess the number between 1 and 10</p>
+      <input type="number" id="guessInput" placeholder="Enter your guess" />
+      <button onclick="checkGuess()">🎯 Submit</button>
+      <button onclick="restartGame()">🔁 Restart</button>
+      <p id="message"></p>
+      <p id="attemptsLeft"></p>
+      <p>🏆 Wins: <span id="wins">0</span> | 💀 Losses: <span id="losses">0</span></p>
+    </div>
+  </div>
+
+</div>
+
+<footer>© 2025 Group 2 | All Rights Reserved</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
